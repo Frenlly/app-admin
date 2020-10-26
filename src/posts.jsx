@@ -4,7 +4,22 @@ import { Edit, SimpleForm, TextInput, ReferenceInput, SelectInput } from 'react-
 import { Create } from 'react-admin';
 import {Filter} from 'react-admin'
 import { useMediaQuery } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles'
 
+const styles = makeStyles({
+    button: {
+        '& svg':{
+            color: 'orange'
+        }
+        
+    }
+})
+
+
+const ButtonEdit = props => {
+    const classes = styles()
+    return <EditButton className={classes.button} {...props}/>
+}
 
 const PostFilter = props => {
     return(
@@ -35,7 +50,7 @@ export const PostList = (props) => {
                     </ReferenceField>
                     <TextField source="title" />
                     <TextField source="body" />
-                    <EditButton />
+                    <ButtonEdit />
                 </Datagrid>
             )}
         </List>
@@ -48,7 +63,7 @@ const PostTitle = ({ record }) => {
 
 export const PostEdit = props => {
     return(
-        <Edit {...props} title = {<PostTitle />}>
+        <Edit {...props} title = {<PostTitle />} >
             <SimpleForm className="uno">
                 <TextInput disabled source="id" />
                 <ReferenceInput source="userId" reference="users">

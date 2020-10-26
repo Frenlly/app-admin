@@ -7,15 +7,20 @@ const styles = makeStyles({
         textDecoration: 'none'
     }, 
     icon: {
-        width: '0.5px',
+        width: '5px',
+        height: '5px',
         paddingLeft: 2,
     }
 })
 
-const MyUrlField = ({ record = {}, source }) =>
-    <a href={record[source]} className = {styles.icon}>
-        {record[source]}
-        <LaunchIcon className={styles.icon}/>
-    </a>;
+const MyUrlField = ({ record = {}, source }) => {
 
+    const clases = styles();
+    return (
+        <a href={record[source]} target="_blank" rel="noopener noreferrer" className = {clases.link}>
+            {record[source]}
+            <LaunchIcon className={clases.icon}/>
+        </a>
+    )
+}
 export default MyUrlField;
