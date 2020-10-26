@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.RaLayout-content-4, .RaLayout-content-67 {
+  padding: 0px !important;
+}
+
+.RaSidebar-drawerPaper-27, .RaSidebar-drawerPaper-90 {
+  background-color: #1d2939 !important;
+}
+
+.RaMenuItemLink-root-31, .MuiListItemIcon-root, .RaMenuItemLink-root-94 {
+  color: #fff !important;
+}
+
+.RaMenuItemLink-active-32, .RaMenuItemLink-active-95{
+  background-color: #2196f3 !important;
+  color: #fff !important;
+}
+
+.list-page {
+  padding: 20px !important;
+}
