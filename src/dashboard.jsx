@@ -85,7 +85,7 @@ export default () => {
                 <p>Sub Titulo</p>
             </header>
 
-            <body className={style.body}>
+            <div className={style.body}>
                 <section>
                     <div className={style.card_uno}>
                        <AccessAlarmIcon className={style.icon} />
@@ -116,7 +116,7 @@ export default () => {
                 </section>
 
                 <Tabla />
-            </body>
+            </div>
         </div>
     )
 }
